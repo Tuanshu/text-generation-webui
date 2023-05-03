@@ -1,7 +1,16 @@
+
+
+
+
+
 python download-model.py mayaeary/pygmalion-6b-4bit-128g
 python3 gptj.py models/pygmalion-6b_b8344bb4eb76a437797ad3b19420a13922aaabe1 c4 --wbits 4 --groupsize 128 --save_safetensors models/pygmalion-6b-4bit-128g.safetensors
 
 python server.py --chat --wbits 4 --groupsize 128 --cpu
+
+python server.py --model victuna-13B-4-bit-ggml --listen --chat --api --verbose	
+python server.py --model vicuna-13B-1.1-GPTQ-4bit-128g --listen --chat --api --cpu
+
 
 https://github.com/oobabooga/text-generation-webui/wiki/LLaMA-model
 

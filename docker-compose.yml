@@ -2,12 +2,12 @@ version: "3.3"
 services:
   text-generation-webui:
     build:
-      context: ./docker         #.
+      context: .         #.
       args:
         # specify which cuda version your card supports: https://developer.nvidia.com/cuda-gpus
         TORCH_CUDA_ARCH_LIST: ${TORCH_CUDA_ARCH_LIST}
         WEBUI_VERSION: ${WEBUI_VERSION}
-    env_file: ./docker/.env #.env
+    env_file: .env #.env
     ports:
       - "${HOST_PORT}:${CONTAINER_PORT}"
       - "${HOST_API_PORT}:${CONTAINER_API_PORT}"

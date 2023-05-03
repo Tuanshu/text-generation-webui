@@ -22,3 +22,10 @@ pip install -r requirements.txt -U
 
 
 https://pytorch.org/tutorials/advanced/cpp_extension.html
+
+
+nvidia_cublas_cu11-11.10.3.66-py3-none-manylinux1_x86_64.whl
+nvidia_cudnn_cu11-8.5.0.96-2-py3-none-manylinux1_x86_64.whl
+
+https://files.pythonhosted.org/packages/dc/30/66d4347d6e864334da5bb1c7571305e501dcb11b9155971421bb7bb5315f/nvidia_cudnn_cu11-8.5.0.96-2-py3-none-manylinux1_x86_64.whl#sha256=402f40adfc6f418f9dae9ab402e773cfed9beae52333f6d86ae3107a1b9527e7
+https://files.pythonhosted.org/packages/dc/30/66d4347d6e864334da5bb1c7571305e501dcb11b9155971421bb7bb5315f/nvidia_cudnn_cu11-8.5.0.96-2-py3-none-manylinux1_x86_64.whl

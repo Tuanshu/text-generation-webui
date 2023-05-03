@@ -12,8 +12,8 @@ def run(context):
         'prompt': prompt,
         'max_new_tokens': 250,
         'do_sample': True,
-        'temperature': 1.3,
-        'top_p': 0.1,
+        'temperature': 0.7,#1.3,
+        'top_p': 0.5,# 0.1,
         'typical_p': 1,
         'repetition_penalty': 1.18,
         'top_k': 40,
@@ -38,5 +38,6 @@ def run(context):
         print(prompt + result)
 
 if __name__ == '__main__':
-    prompt = "In order to make homemade bread, follow these steps:\n1)"
+    #prompt = "In order to make homemade bread, follow these steps:\n1)"
+    prompt = "User: 蘋果是什麼顏色的?"
     run(prompt)

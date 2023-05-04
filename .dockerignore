@@ -7,4 +7,5 @@ Dockerfile
 /prompts
 /softprompts
 /training
-/ts_packages
+#/ts_packages
+/repositories

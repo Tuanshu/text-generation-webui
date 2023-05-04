@@ -78,6 +78,11 @@ RUN . /app/venv/bin/activate && \
 
 RUN cp /app/venv/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cuda118.so /app/venv/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cpu.so
 
+# ts added
+RUN . /app/venv/bin/activate && \
+    pip3 install -r /app/repositories/GPTQ-for-LLaMa/requirements.txt
+ #   pip3 install texttable
+
 COPY . /app/
 ENV CLI_ARGS=""
 CMD . /app/venv/bin/activate && python3 server.py ${CLI_ARGS}

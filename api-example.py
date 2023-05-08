@@ -38,6 +38,6 @@ def run(prompt):
         print(prompt + result)
 
 if __name__ == '__main__':
-    #prompt = "In order to make homemade bread, follow these steps:\n1)"
-    prompt = "User: 蘋果是什麼顏色的?"
+    prompt = "In order to make homemade bread, follow these steps:\n1)"
+    # prompt = "User: 蘋果是什麼顏色的?"
     run(prompt)

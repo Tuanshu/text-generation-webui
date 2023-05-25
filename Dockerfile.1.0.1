@@ -1,0 +1,19 @@
+# this is not the actual dockerfile, but reverse engineered 
+# (missing, wieird, maybe reverted), powershell command log:
+# code text-generation-webui
+# C:/Users/TuanShu/miniconda3/Scripts/activate
+# conda activate env_NLP
+# docker-compose up --build
+# docker-compose up --build
+# docker save -o textgen_webgui_1.0.1.tar textgen_webgui:1.0.1
+# docker load -i textgen_webgui_1.0.1.tar
+# becides, 1.01 was build with docker-compose up --build
+# therefore, I need to modified the docker-compose.yml
+#     image: textgen_webgui:latest ->     image: textgen_webgui:1.01
+# to build this
+FROM textgen_webui:latest
+
+LABEL description="textgen1.0.1_rev_engineered" version="1.0.1" maintainer="TS"
+
+RUN . /app/venv/bin/activate && pip3 install sentence-transformers
+RUN . /app/venv/bin/activate && pip3 install flask_cloudflared==0.0.12

@@ -21,11 +21,11 @@ async def run(context):
         "prompt": context,
         "max_new_tokens": 1024,  # 512
         "do_sample": True,  # True
-        "temperature": 1,  # 1.3
+        "temperature": 0.7,  # 1.3 0.1
         "top_p": 1,  # 0.1        # 如果 1
         "typical_p": 1,
-        "repetition_penalty": 1,
-        "top_k": 10,  # 40               2
+        "repetition_penalty": 1.18, # 1.1
+        "top_k": 40,  # 40               2
         "min_length": 0,
         "no_repeat_ngram_size": 0,
         "num_beams": 1,
@@ -33,11 +33,11 @@ async def run(context):
         "length_penalty": 1,  # 1
         "early_stopping": False,
         "seed": 17,  # -1
-        "add_bos_token": True,
+        "add_bos_token": True, #True
         "truncation_length": 2048,
         "ban_eos_token": False,
-        "skip_special_tokens": True,
-        "stopping_strings": [],
+        "skip_special_tokens": False, #True
+        "stopping_strings": ["禁止事項"],
     }
 
     async with websockets.connect(URI, ping_interval=None) as websocket:
@@ -63,5 +63,9 @@ async def print_response_stream(prompt):
 
 
 if __name__ == "__main__":
-    prompt = "User: 請問Next是什麼?\nAssistant:​"
+    prompt = """越
+口
+文約12-15天  外籍人士申辦DN簽證批文之個人資料表 入境登记表
+User: what material should I prepare for a business trip to vietnam?
+Assistant: """
     asyncio.run(print_response_stream(prompt))
